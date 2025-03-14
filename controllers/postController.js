@@ -25,7 +25,7 @@ function show(req, res) {
     const postSql = 'SELECT * FROM posts WHERE id = ?';
 
     const tagSql = `
-    SELECT tags.*
+    SELECT tags.label
     FROM tags
     JOIN post_tag ON tags.id = post_tag.tag_id
     WHERE post_tag.post_id = ?;
